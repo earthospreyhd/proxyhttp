@@ -5,6 +5,35 @@
 
 </head>
 
+<body>
 
+  <button onclick = "post ()">click me </button>
+
+<script>
+
+function post () {
+
+  var xhr = new XMLHttpRequest();
+
+  xhr.open ("POST", "/proxy", "true");
+
+  xhr.send ("hello");
+
+  xhr.onReadyStateChange = function () {
+
+    if (this.readyState == 4 && this.status = 200) {
+
+      console.log (xhr.responseText);
+    }
+
+  }
+
+}
+
+
+
+</script>
+
+</body>
 
 </html>
